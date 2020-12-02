@@ -2,7 +2,8 @@ package no.amumurst
 
 object Days {
   val allDays: List[DayRunner] = List(
-    Day1
+    Day1,
+    Day2
   )
 
   def runDays(task: DayTask): Unit =
