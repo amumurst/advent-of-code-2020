@@ -1,6 +1,6 @@
 package no.amumurst
 
-object Day4 extends DayRunner {
+object Day4 extends DayRunner(4) {
   sealed abstract class PassportPart(val name: String) {
     def validateValue(value: String): Boolean
   }
@@ -92,6 +92,4 @@ object Day4 extends DayRunner {
     file
       .pipe(parseFile)
       .count(_.checkAllData)
-
-  override def isForDay(d: DayTask): Boolean = d.day == 4
 }

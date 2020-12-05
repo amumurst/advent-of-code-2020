@@ -9,5 +9,5 @@ object Days {
   )
 
   def runDays(task: DayTask): Unit =
-    allDays.filter(_.isForDay(task)).foreach(_.run(task))
+    allDays.filter(_.day == task.day).foreach(_.run(task))
 }

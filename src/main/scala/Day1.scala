@@ -1,6 +1,6 @@
 package no.amumurst
 
-object Day1 extends DayRunner {
+object Day1 extends DayRunner(1) {
   def recursN(ns: List[List[Int]], sumSoFar: Int = 0, multi: Int = 1): Option[Int] =
     ns match {
       case Nil              => None
@@ -29,7 +29,5 @@ object Day1 extends DayRunner {
       c <- fileInts
       if a + b + c == 2020
     } yield a * b * c
-   */
-
-  override def isForDay(d: DayTask): Boolean = d.day == 1
+ */
 }

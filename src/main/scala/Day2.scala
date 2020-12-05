@@ -1,6 +1,6 @@
 package no.amumurst
 
-object Day2 extends DayRunner {
+object Day2 extends DayRunner(2) {
   trait PWChecker {
     def check(s: String): Boolean
     def &&(other: PWChecker): PWChecker = (s: String) => this.check(s) && other.check(s)
@@ -40,6 +40,4 @@ object Day2 extends DayRunner {
 
   override def runB(file: List[String]): Any =
     file.collect { case s"${ExactPositionRule(a)}: $word" if a.check(word) => 1 }.size
-
-  override def isForDay(d: DayTask): Boolean = d.day == 2
 }

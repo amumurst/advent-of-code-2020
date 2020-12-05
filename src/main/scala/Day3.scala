@@ -1,6 +1,6 @@
 package no.amumurst
 
-object Day3 extends DayRunner {
+object Day3 extends DayRunner(3) {
   def slopeCheck(file: List[String], xSkip: Int, ySkip: Int): Int =
     file
       .grouped(ySkip)
@@ -20,6 +20,4 @@ object Day3 extends DayRunner {
       slopeCheck(file, 5, 1).toLong *
       slopeCheck(file, 7, 1).toLong *
       slopeCheck(file, 1, 2).toLong
-
-  override def isForDay(d: DayTask): Boolean = d.day == 3
 }

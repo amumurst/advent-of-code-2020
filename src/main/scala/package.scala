@@ -18,11 +18,9 @@ package object amumurst extends ChainingSyntax {
   def readFile(d: DayTask): List[String] =
     scala.io.Source.fromResource(s"Day${d.day}.txt").getLines().toList
 
-  abstract class DayRunner {
+  abstract class DayRunner(val day: Int) {
     def runA(file: List[String]): Any
     def runB(file: List[String]): Any
-
-    def isForDay(d: DayTask): Boolean
 
     def run(d: DayTask): Unit = d.task match {
       case TaskA => runA(readFile(d)).pipe(println).time()
