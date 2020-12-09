@@ -9,6 +9,7 @@ object Days {
     Day5,
     Day6,
     Day7,
+    Day9,
   )
 
   def runDays(task: DayTask): Unit =
